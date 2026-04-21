@@ -1,8 +1,7 @@
 SELECT 
-    restaurant_name, 
-    created_at
+    hotel_id, 
+    MIN(price_per_night) AS min_price
 FROM 
-    Restaurants
-ORDER BY 
-    created_at DESC
-LIMIT 5;
+    Rooms
+GROUP BY 
+    hotel_id;
